@@ -1,9 +1,9 @@
 {
   "name": "lit-html",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "HTML template literals in JavaScript",
   "license": "BSD-3-Clause",
-  "repository": "PolymerLabs/lit-html",
+  "repository": "Polymer/lit-html",
   "main": "lit-html.umd.js",
   "module": "lit-html.js",
   "directories": {
@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "tsc && babel -o lit-html.umd.js lit-html.js",
-    "gen-docs": "typedoc --readme none --mode modules --excludeNotExported --excludePrivate --exclude **/*_test.ts --out ./docs/api .",
+    "gen-docs": "typedoc --readme none --mode modules --excludeNotExported --excludePrivate --exclude **/*_test.ts --out ./docs/api ./src",
     "test": "npm run build && wct --npm && npm run lint",
     "quicktest": "wct -l chrome -p --npm",
     "checksize": "uglifyjs lit-html.js -mc --toplevel | gzip -9 | wc -c",
@@ -31,6 +31,8 @@
   "devDependencies": {
     "@types/chai": "^4.1.0",
     "@types/mocha": "^2.2.46",
+    "@webcomponents/shadycss": "^1.1.0",
+    "@webcomponents/shadydom": "^1.0.11",
     "@webcomponents/template": "^1.2.2",
     "babel-cli": "^6.26.0",
     "babel-polyfill": "^6.26.0",

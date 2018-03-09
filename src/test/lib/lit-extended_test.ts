@@ -15,8 +15,8 @@
 /// <reference path="../../../node_modules/@types/mocha/index.d.ts" />
 /// <reference path="../../../node_modules/@types/chai/index.d.ts" />
 
-import {render} from '../../lib/lit-extended.js';
-import {html, render as renderPlain} from '../../lit-html.js';
+import {html, PropertyPart, render} from '../../lib/lit-extended.js';
+import {directive, html as htmlPlain} from '../../lit-html.js';
 
 const assert = chai.assert;
 
@@ -51,6 +51,35 @@ suite('lit-extended', () => {
       assert.equal(container.innerHTML, '<div foo="1bar2baz3"></div>');
     });
 
+    test('renders a boolean attribute as an empty string when truthy', () => {
+      let t = (value: any) => html`<div foo?="${value}"></div>`;
+
+      render(t(true), container);
+      assert.equal(container.innerHTML, '<div foo=""></div>');
+
+      render(t('a'), container);
+      assert.equal(container.innerHTML, '<div foo=""></div>');
+
+      render(t(1), container);
+      assert.equal(container.innerHTML, '<div foo=""></div>');
+    });
+
+    test('removes a boolean attribute when falsey', () => {
+      let t = (value: any) => html`<div foo?="${value}"></div>`;
+
+      render(t(false), container);
+      assert.equal(container.innerHTML, '<div></div>');
+
+      render(t(0), container);
+      assert.equal(container.innerHTML, '<div></div>');
+
+      render(t(null), container);
+      assert.equal(container.innerHTML, '<div></div>');
+
+      render(t(undefined), container);
+      assert.equal(container.innerHTML, '<div></div>');
+    });
+
     test('reuses an existing ExtendedTemplateInstance when available', () => {
       const t = (content: any) => html`<div>${content}</div>`;
 
@@ -73,15 +102,15 @@ suite('lit-extended', () => {
         'overwrites an existing (plain) TemplateInstance if one exists, ' +
             'even if it has a matching Template',
         () => {
-          const t = () => html`<div>foo</div>`;
+          const t = (tag: any) => tag`<div>foo</div>`;
 
-          renderPlain(t(), container);
+          render(t(htmlPlain), container);
 
           assert.equal(container.children.length, 1);
           const firstDiv = container.children[0];
           assert.equal(firstDiv.textContent, 'foo');
 
-          render(t(), container);
+          render(t(html), container);
 
           assert.equal(container.children.length, 1);
           const secondDiv = container.children[0];
@@ -121,7 +150,8 @@ suite('lit-extended', () => {
       div.click();
       assert.equal(thisValue, div);
 
-      // MouseEvent is not a function in IE, so the event cannot be an instance of it
+      // MouseEvent is not a function in IE, so the event cannot be an instance
+      // of it
       if (typeof MouseEvent === 'function') {
         assert.instanceOf(event!, MouseEvent);
       } else {
@@ -189,6 +219,15 @@ suite('lit-extended', () => {
       assert.equal(target, undefined);
     });
 
+    test('renders directives on PropertyParts', () => {
+      const fooDirective = directive((part: PropertyPart) => {
+        (part.element as any)[part.name] = 1234;
+      });
+
+      render(html`<div foo="${fooDirective}"></div>`, container);
+      assert.equal(container.innerHTML, '<div></div>');
+      assert.equal((container.firstElementChild as any).foo, 1234);
+    });
 
   });
 });

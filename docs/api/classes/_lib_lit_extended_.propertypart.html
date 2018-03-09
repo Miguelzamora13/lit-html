@@ -93,23 +93,25 @@
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_lib_lit_extended_.propertypart.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="_lib_lit_extended_.propertypart.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_lib_lit_extended_.propertypart.html#_previousvalues" class="tsd-kind-icon">_previous<wbr>Values</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_lib_lit_extended_.propertypart.html#element" class="tsd-kind-icon">element</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_lib_lit_extended_.propertypart.html#instance" class="tsd-kind-icon">instance</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_lib_lit_extended_.propertypart.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_lib_lit_extended_.propertypart.html#size" class="tsd-kind-icon">size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_lib_lit_extended_.propertypart.html#size" class="tsd-kind-icon">size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_lib_lit_extended_.propertypart.html#strings" class="tsd-kind-icon">strings</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_lib_lit_extended_.propertypart.html#_getvalue" class="tsd-kind-icon">_get<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_lib_lit_extended_.propertypart.html#_equaltopreviousvalues" class="tsd-kind-icon">_equal<wbr>ToPrevious<wbr>Values</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_lib_lit_extended_.propertypart.html#_interpolate" class="tsd-kind-icon">_interpolate</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_lit_extended_.propertypart.html#setvalue" class="tsd-kind-icon">set<wbr>Value</a></li>
 							</ul>
 						</section>
@@ -118,19 +120,18 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Property<wbr>Part<span class="tsd-signature-symbol">(</span>instance<span class="tsd-signature-symbol">: </span><a href="_lit_html_.templateinstance.html" class="tsd-signature-type">TemplateInstance</a>, element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, strings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_lit_extended_.propertypart.html" class="tsd-signature-type">PropertyPart</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#constructor">constructor</a></p>
-								<p>Overrides <a href="_lit_html_.part.html">Part</a>.<a href="_lit_html_.part.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/PolymerLabs/lit-html/blob/43396bf/src/lit-html.ts#L226">lit-html.ts:226</a></li>
+									<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lit-html.ts#L448">lit-html.ts:448</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -156,13 +157,24 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="_previousvalues" class="tsd-anchor"></a>
+					<h3>_previous<wbr>Values</h3>
+					<div class="tsd-signature tsd-kind-icon">_previous<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#_previousvalues">_previousValues</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lit-html.ts#L448">lit-html.ts:448</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="element" class="tsd-anchor"></a>
 					<h3>element</h3>
 					<div class="tsd-signature tsd-kind-icon">element<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Element</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#element">element</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/PolymerLabs/lit-html/blob/43396bf/src/lit-html.ts#L223">lit-html.ts:223</a></li>
+							<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lit-html.ts#L444">lit-html.ts:444</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -172,9 +184,9 @@
 					<div class="tsd-signature tsd-kind-icon">instance<span class="tsd-signature-symbol">:</span> <a href="_lit_html_.templateinstance.html" class="tsd-signature-type">TemplateInstance</a></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/_lit_html_.multipart.html">MultiPart</a>.<a href="../interfaces/_lit_html_.multipart.html#instance">instance</a></p>
-						<p>Inherited from <a href="_lit_html_.part.html">Part</a>.<a href="_lit_html_.part.html#instance">instance</a></p>
+						<p>Inherited from <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#instance">instance</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/PolymerLabs/lit-html/blob/43396bf/src/lit-html.ts#L190">lit-html.ts:190</a></li>
+							<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lit-html.ts#L443">lit-html.ts:443</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -185,20 +197,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#name">name</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/PolymerLabs/lit-html/blob/43396bf/src/lit-html.ts#L224">lit-html.ts:224</a></li>
+							<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lit-html.ts#L445">lit-html.ts:445</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="size" class="tsd-anchor"></a>
 					<h3>size</h3>
 					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/_lit_html_.multipart.html">MultiPart</a>.<a href="../interfaces/_lit_html_.multipart.html#size">size</a></p>
 						<p>Inherited from <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#size">size</a></p>
-						<p>Overrides <a href="_lit_html_.part.html">Part</a>.<a href="_lit_html_.part.html#size">size</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/PolymerLabs/lit-html/blob/43396bf/src/lit-html.ts#L226">lit-html.ts:226</a></li>
+							<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lit-html.ts#L447">lit-html.ts:447</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -209,7 +220,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#strings">strings</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/PolymerLabs/lit-html/blob/43396bf/src/lit-html.ts#L225">lit-html.ts:225</a></li>
+							<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lit-html.ts#L446">lit-html.ts:446</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -217,27 +228,56 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-					<a name="_getvalue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _get<wbr>Value</h3>
+					<a name="_equaltopreviousvalues" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _equal<wbr>ToPrevious<wbr>Values</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">_get<wbr>Value<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">_equal<wbr>ToPrevious<wbr>Values<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, startIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_lit_html_.multipart.html">MultiPart</a>.<a href="../interfaces/_lit_html_.multipart.html#_getvalue">_getValue</a></p>
-								<p>Inherited from <a href="_lit_html_.part.html">Part</a>.<a href="_lit_html_.part.html#_getvalue">_getValue</a></p>
+								<p>Inherited from <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#_equaltopreviousvalues">_equalToPreviousValues</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/PolymerLabs/lit-html/blob/43396bf/src/lit-html.ts#L197">lit-html.ts:197</a></li>
+									<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lit-html.ts#L483">lit-html.ts:483</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<h5>values: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>startIndex: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_interpolate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _interpolate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">_interpolate<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, startIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#_interpolate">_interpolate</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lit-html.ts#L462">lit-html.ts:462</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>values: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>startIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -245,20 +285,24 @@
 					<a name="setvalue" class="tsd-anchor"></a>
 					<h3>set<wbr>Value</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Value<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Value<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, startIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_lit_html_.multipart.html">MultiPart</a>.<a href="../interfaces/_lit_html_.multipart.html#setvalue">setValue</a></p>
 								<p>Overrides <a href="_lit_html_.attributepart.html">AttributePart</a>.<a href="_lit_html_.attributepart.html#setvalue">setValue</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/PolymerLabs/lit-html/blob/43396bf/src/lib/lit-extended.ts#L91">lib/lit-extended.ts:91</a></li>
+									<li>Defined in <a href="https://github.com/Polymer/lit-html/blob/8692b4c/src/lib/lit-extended.ts#L111">lib/lit-extended.ts:111</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>values: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>startIndex: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -273,6 +317,12 @@
 					<li class="globals  ">
 						<a href="../index.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_lib_async_append_.html">"lib/async-<wbr>append"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_lib_async_replace_.html">"lib/async-<wbr>replace"</a>
+					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_lib_lit_extended_.html">"lib/lit-<wbr>extended"</a>
 					</li>
@@ -280,28 +330,43 @@
 						<a href="../modules/_lib_repeat_.html">"lib/repeat"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_lib_shady_render_.html">"lib/shady-<wbr>render"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_lib_unsafe_html_.html">"lib/unsafe-<wbr>html"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_lib_until_.html">"lib/until"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_lit_html_.html">"lit-<wbr>html"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_test_lib_deferred_.html">"test/lib/deferred"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_test_lib_test_async_iterable_.html">"test/lib/test-<wbr>async-<wbr>iterable"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_lib_lit_extended_.eventpart.html" class="tsd-kind-icon">Event<wbr>Part</a>
+						<a href="_lib_lit_extended_.booleanattributepart.html" class="tsd-kind-icon">Boolean<wbr>Attribute<wbr>Part</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_lib_lit_extended_.extendedtemplateinstance.html" class="tsd-kind-icon">Extended<wbr>Template<wbr>Instance</a>
+						<a href="_lib_lit_extended_.eventpart.html" class="tsd-kind-icon">Event<wbr>Part</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
 						<a href="_lib_lit_extended_.propertypart.html" class="tsd-kind-icon">Property<wbr>Part</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 								<a href="_lib_lit_extended_.propertypart.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_lit_extended_.propertypart.html#_previousvalues" class="tsd-kind-icon">_previous<wbr>Values</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_lib_lit_extended_.propertypart.html#element" class="tsd-kind-icon">element</a>
@@ -312,14 +377,17 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_lib_lit_extended_.propertypart.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_lib_lit_extended_.propertypart.html#size" class="tsd-kind-icon">size</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_lib_lit_extended_.propertypart.html#strings" class="tsd-kind-icon">strings</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_lib_lit_extended_.propertypart.html#_getvalue" class="tsd-kind-icon">_get<wbr>Value</a>
+								<a href="_lib_lit_extended_.propertypart.html#_equaltopreviousvalues" class="tsd-kind-icon">_equal<wbr>ToPrevious<wbr>Values</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_lib_lit_extended_.propertypart.html#_interpolate" class="tsd-kind-icon">_interpolate</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_lib_lit_extended_.propertypart.html#setvalue" class="tsd-kind-icon">set<wbr>Value</a>
@@ -329,7 +397,13 @@
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_lib_lit_extended_.html#render" class="tsd-kind-icon">render</a>
+						<a href="../modules/_lib_lit_extended_.html#extendedpartcallback" class="tsd-kind-icon">extended<wbr>Part<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_lib_lit_extended_.html#html" class="tsd-kind-icon">html</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_lib_lit_extended_.html#svg" class="tsd-kind-icon">svg</a>
 					</li>
 				</ul>
 			</nav>
